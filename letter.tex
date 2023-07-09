@@ -42,24 +42,24 @@
 \usepackage[xetex, bookmarks, colorlinks, breaklinks]{hyperref}
 
 \newcommand{\myAuthor}
-{F. Nietzsche} %<{"type": "text", "description": "Author"}>
+{F. Nietzsche} %<{"type": "text", "description": "Author", inputValue: "F. Nietzsche"}>
 \newcommand{\fromLines}{
   \small
   {
     \textbf{\myAuthor}
     %<{"type": "list", "description": "From lines"}
-    \fromItem{Artillerieregiment, 8. Batt.}%<{"type": "text", "description": "From"}>
-    \fromItem{Nordstraße 15, Naumburg}
+    \fromItem{Artillerieregiment, 8. Batt.}%<{"type": "text", "description": "From", inputValue: "Artillerieregiment, 8. Batt."}>
+    \fromItem{Nordstraße 15, Naumburg}%<{"type": "text", "description": "From", inputValue: "Nordstraße 15, Naumburg"}>
     %>
   }
 }
 \newcommand{\toLines}{
   \normalsize \sffamily
   %<{"type": "list", "description": "To lines"}
-    \toItem{Carl Freiherr von Gersdorff} %<{"type": "text", "description": "To"}>
-    \toItem{Stresow-Kaserne I}
-    \toItem{Grenadierstraße 13-16}
-    \toItem{13597 Spandau}
+    \toItem{Carl Freiherr von Gersdorff} %<{"type": "text", "description": "To", inputValue: "Carl Freiherr von Gersdorff"}>
+    \toItem{Stresow-Kaserne I} %<{"type": "text", "description": "To", inputValue: "Stresow-Kaserne I"}>
+    \toItem{Grenadierstraße 13-16} %<{"type": "text", "description": "To", inputValue: "Grenadierstraße 13-16"}>
+    \toItem{13597 Spandau} %<{"type": "text", "description": "To", inputValue: "13597 Spandau"}>
   %>
 }
 \newcommand{\customSubject}[1]{%
@@ -69,7 +69,7 @@
 }
 \newcommand{\mySubject}
 {%
-\customSubject{My life as a soldier} %<{"type": "text", "description": "Subject (optional)", "deleteOnEmpty": "true"}>
+\customSubject{My life as a soldier} %<{"type": "text", "description": "Subject (optional)", "deleteOnEmpty": "true", inputValue: "My life as a soldier"}>
 }
 \newcommand{\fromItem}[1]{\textbullet{}\textbf{#1}}
 \newcommand{\toItem}[1]{
@@ -77,14 +77,18 @@
 }
 \newcommand{\city}
 {%
-  {Naumburg}, %<{"type": "text", "description": "City (optional)", "deleteOnEmpty": "true"}>
+  {Naumburg}, %<{"type": "text", "description": "City (optional)", "deleteOnEmpty": "true", inputValue: "Naumburg"}>
 }
 \newcommand{\myDate}{%
-  November 20th 2022%<{"type": "date", "description": "Date (optional)", "deleteOnEmpty": "true"}>
+  November 20th 2022%<{"type": "date", "description": "Date (optional)", "deleteOnEmpty": "true", inputValue: "November 20th 2022"}>
 }
 \newcommand{\myBody}
 {
-%<{"type": "textblock", "description": "Body"}
+%<{
+%   type: "textblock",
+%   description: "Body",
+%   inputValue: "Dear Friend,\n\nI am a bombardier in the second mounted division of the Fourth Horse Artillery.\n\nYou may well imagine how astonished I was by this revolution in my affairs, and what a violent upheaval it has made in my everyday humdrum existence. Nevertheless I have borne the change with determination and courage, and even derive a certain pleasure from this turn of fortune. Now that I have an opportunity of doing a little athletic training I am more than ever thankful to our Schopenhauer. For the first five weeks I had to be in the stables. At 5:30 in the morning I had to be among the horses, removing the manure and grooming the animals down with the currycomb and horse brush. For the present my work lasts on an average from 7 a.m. to 10 a.m. and from 11.30 a.m. to 6 p.m., the greater part of which I spend in parade drill. You must know that in the horse artillery there is a tremendous amount to learn. We get most fun out of the riding lessons. My horse is a very fine animal, and I am supposed to have some talent for riding. When I and my steed gallop round the large parade ground, I feel very contented with my lot. On the whole, too, I am very well treated. Above all, we have a very nice captain.\n\nI have now told you all about my life as a soldier. This is the reason why I have kept you waiting so long for news and for an answer to your last letter. Meanwhile, if I am not mistaken, you will probably have been freed from your military fetters; that is why I thought it would be best to address this letter to Spandau.\n\nBut my time is already up; a business letter to Volkmann and another to Ritschl have robbed me of much of it. So I must stop in order to get ready for the parade in full kit.\n\nWell, old man, forgive my long neglect, and hold the god of War responsible for most of it.\n\nYour devoted friend,"
+% }
 Dear Friend,
 
 I am a bombardier in the second mounted division of the Fourth Horse Artillery.
@@ -130,7 +134,7 @@ Your devoted friend,
 \myBody
 
 \begin{FlushRight}
-  \signature{signature.pdf} %<{"type": "image", "description": "Signature image (optional)", "deleteOnEmpty": "true"}>
+  \signature{signature.pdf} %<{"type": "image", "description": "Signature image (optional)", "deleteOnEmpty": "true", inputValue: "signature.pdf"}>
   \myAuthor
 \end{FlushRight}
 
